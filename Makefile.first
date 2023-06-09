@@ -1,0 +1,12 @@
+.DEFAULT_GOAL := run
+
+setup: requirements.txt
+	pip install -r requirements.txt
+
+run: setup
+    python app.py
+
+clean:
+    rm -rf __pycache__
+
+.PHONY: run clean
